@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <form>
+     <header>
+      <h2 id="title">customer feedback survey</h2>
+      <p id="description">Thank you for taking the time to provide feedback. Your responses will help us improve our products and services.</p>
+     </header>
+     <div class="form">
+        <label for="name">Name</label><br>
+        <input  class="info"id="name" name="name" type="text" placeholder="enter your name" required>
+     </div>
+     <div class="form">
+        <label for="email">Email</label><br>
+        <input  class="info" id="email" name="email" type="email"  placeholder="enter your email" required>
+     </div>
+     <div class="form">
+        <label for="address">Address(optional)</label><br>
+        <input  class="info" id="address" name="address" type="text" placeholder="enter your address">
+     </div>
+     <div class="select-form">
+        <p id="quest">How often do you use our product/service </p>
+       <select id="dropdown" name="select">
+        <option value=""disabled selected>select your option</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="rarely">Rarely</option>
+        <option value="first time user">First time user</option>
+       </select>
+     </div>
+     <div class="radio-form">
+      <p id="quest">How satisfied are you with your recent experience with us</p>
+      <label for="verysatisfied">
+         <input type="radio" name="satisfied" value="very satisfied"  id="verysatisfied">Very satisfied
+      </label>
+      <label for="satisfied">
+         <input type="radio" name="satisfied" value="satisfied"  id="satisfied">Satisfied
+      </label>
+      <label for="neutral">
+         <input type="radio" name="satisfied" value="neutral"  id="neutral">Neutral
+      </label>
+      <label for="Dissatisfied">
+         <input type="radio" name="satisfied" value="Dissatisfied" id="Dissatisfied">Dissatisfied
+      </label>
+     </div>
+       <div class="check-form">
+        <p id="quest">What were the main reasons you chose our product/service</p>
+     
+       <label for="quality">
+         <input type="checkbox" name="prefer" class="input-checkbox" value="quality" id="quality">Quality
+       </label><br>
+       <label for="price">
+         <input type="checkbox" name="prefer" class="input-checkbox" value="price" id="price">Price
+       </label><br>
+       <label for="Convenience">
+         <input type="checkbox" name="prefer" class="input-checkbox" value="Convenience" id="Convenience">Convenience
+       </label><br>
+       <label for="Reputation">
+         <input type="checkbox" name="prefer" class="input-checkbox" value="reputation" id="reputation">Reputation
+       </label><br>
+        <label for="other">
+         <input type="checkbox" name="prefer" class="input-checkbox" value="other" id="other" onclick="toggleTextField()">Other
+        </label>
+        <div id="otherTextField">
+         <label for="otherReason">Please specify:</label><br>
+         <textarea id="otherReason" name="otherReason" rows="4" cols="50"></textarea>
+       </div>
+       </div>
+       <div class="form">
+         <p id="quest">What could we improve to make your experience better</p>
+          <label for="feedback">
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your text here..."></textarea>
+          </label>
+       </div>
+       <div class="btn-form">
+         <input  id="btn" type="submit" value="submit">
+       </div>
+       </form>
+    </div>
+
+    <script>
+     function toggleTextField(){
+      const otherCheckbox = document.getElementById("other");
+      const textField = document.getElementById("otherTextField");
+
+      if(otherCheckbox.checked){
+         textField.style.display="block";
+      }else{
+         textField.style.display="none";
+      }
+     }
+
+      // Validation for required fields before form submission
+  document.querySelector('form').addEventListener('submit', function(event) {
+    if (!document.getElementById("name").value || !document.getElementById("email").value) {
+      alert("Please fill out all required fields.");
+      event.preventDefault(); // Prevents the form from being submitted
+    }
+  });
+    </script>
+</body>
+</html>

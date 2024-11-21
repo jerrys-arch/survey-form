@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:url("https://media.istockphoto.com/id/1513463138/photo/feedback-concept-user-comment-rating-online-writing-feedback-review.jpg?s=1024x1024&w=is&k=20&c=kt_phsfKoBbEM5xJLs6rC1nDKXQOzl7lfiKJBjavW8A=");
+    background-size: cover;
+}
+.container{
+    width:80%;
+    max-width:800px;
+    padding:30px;
+    margin:10px auto;
+    background: rgba(255,255,255,0.4);
+    display: block;
+}
+.container form{
+    margin-left: 10px;
+}
+
+#title{
+    text-align: center;
+    font-size:30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+#description{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+.form input{
+    width:100%;
+    padding: 10px;
+    font-size: 15px;
+    margin:12px 0;
+    border-radius: 4px;
+ }
+ .form label{
+    font-size: 20px;
+    font-weight: bold;
+ }
+ #quest{
+    font-size: 20px;
+    font-weight: bold;
+    margin:15px 0px;
+    
+
+ }
+ .select-form #dropdown{
+    width:100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+ }
+ .radio-form{
+   display: flex;
+   flex-direction: column;
+   font-size: 20px;
+ }
+ .radio-form input[type="radio"]{
+    margin: 12px;
+    transform:scale(1.5);
+ }
+ .check-form{
+    font-size: 20px;
+ }
+ .check-form input[type="checkbox"]{
+    margin:12px;
+    transform: scale(1.5);
+ }
+ #otherTextField {
+   margin-top: 10px;
+   padding: 10px;
+   width: 100%; 
+   max-width: 100%; 
+   box-sizing: border-box; 
+   display: none; 
+   overflow: hidden;
+ }
+ .form #feedback{
+    height: 110px;
+    width:100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+ }
+ .btn-form #btn{
+   margin:10px auto;
+   width: 100%;
+   padding: 15px;
+   border-radius: 8px;
+   background: #3f3f3d;
+   font-size: 20px;
+   color:white;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ .btn-form #btn:hover {
+   background: #9c9797;
+}
+
+@media (max-width: 768px) {
+   .container {
+       width: 95%;
+       padding: 15px;
+   }
+
+   .radio-form input[type="radio"], .check-form input[type="checkbox"] {
+       transform: scale(1.8);
+   }
+
+   .form label {
+       font-size: 18px;
+   }
+
+   .form #feedback {
+       height: 150px;
+   }
+
+   .btn-form #btn {
+       width: 100%;
+   }
+}
+
